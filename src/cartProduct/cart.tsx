@@ -7,6 +7,7 @@ interface Props {
   onDeleteProduct: Function;
   onDeleteCarrt: Function;
   onBuyNow: Function;
+  onSumMoney: Function;
 }
 export default function Cart(props: Props) {
   return (
@@ -28,26 +29,24 @@ export default function Cart(props: Props) {
                   <p>{product.qty}</p>
                   <button onClick={() => props.onAddQuantity(index)}>+</button>
                 </td>
-                <td>{(product.price * product.qty).toLocaleString()}</td>
+                <td>{(product.price * product.qty).toLocaleString()}$</td>
                 <td>
-                  <div>
-                    <button
-                      onClick={() => {
-                        props.onDeleteProduct(index);
-                        console.log(12121212212);
-                      }}
-                    >
-                      x
-                    </button>
-                  </div>
+                  <button
+                    onClick={() => {
+                      props.onDeleteProduct(index);
+                      console.log(12121212212);
+                    }}
+                  >
+                    x
+                  </button>
                 </td>
               </tr>
             ))}
         </tbody>
       </table>
       <div className="cart-footer">
-        <p>total:222222</p>
-        <button onClick={()=>props.onBuyNow()}>Buy now</button>
+        <p>Total:{props.onSumMoney().toLocaleString()}$</p>
+        <button onClick={() => props.onBuyNow()}>Buy now</button>
         <button onClick={() => props.onDeleteCarrt()}>Clear Cart</button>
       </div>
     </div>

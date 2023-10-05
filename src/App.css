@@ -31,6 +31,10 @@
   background-color: brown;
   border-radius: 10px;
   border: none;
+  color: white;
+  position: absolute;
+  
+
 }
 .list-card {
   display: grid;
@@ -45,12 +49,13 @@ h1 {
 /* listcart */
 .cart {
   width: 90%;
-  border: 1px solid black;
+  border: 1px solid rgb(225, 216, 216);
   margin: 50px auto;
   padding: 30px;
   position: relative;
   border-radius: 10px;
-  /* background-color: rgb(121, 100, 100); */
+  background-color: rgb(225, 216, 216);
+  box-shadow: 1px 2px 4px rgb(128, 53, 53);
 }
 .cart table {
   width: 100%;
@@ -69,7 +74,10 @@ h1 {
 .cart-footer button {
   padding: 5px;
   border-radius: 5px;
-  background-color: rgb(100, 79, 22);
+  background-color: rgb(123, 101, 41);
+  margin: 10px;
+  border: none;
+  color: white;
 }
 .quantity {
   padding-top: 45px;
