@@ -16,7 +16,7 @@ function App() {
 
       setListCart([...listCart, newProduct]);
     }
-    console.log(34423, listCart);
+    
   };
   // tăng số lượng trong giỏ hàng
   const hadleAddQuantity = (index: number) => {
